@@ -4,7 +4,7 @@ title: About
 ---
 
 <p class="message">
-    个人博客，分享于记录点点滴滴。
+    个人博客，分享与记录点点滴滴。
 </p>
 
 ## 个人介绍
@@ -13,7 +13,7 @@ title: About
 ## 联系方式
 
 * QQ 敬请期待
-* Email androidfoross@gmail.com
+* Email [小容器](mailto:androidfoross@gmail.com)
 
 
 Thanks for reading!
