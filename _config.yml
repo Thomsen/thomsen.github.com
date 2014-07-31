@@ -13,11 +13,6 @@ url:              http://thomsen.github.com
 baseurl:          '/'
 paginate:         5
 
-pages:
-  page:
-    title: 'Archive'
-    url: '/archive'
-
 author:
   name:           'Thomsen'
   url:            https://
