@@ -14,7 +14,7 @@ title: Home
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
-
+<!-- {{ post.content | postmorefilter: post.url, "continue reading>>" }} -->
     {% if post.content contains '<!-- more -->' %}
         {{ post.content | split:'<!-- more -->' | first }}
         <p><a href="{{ post.url }}">continue reading>></a></p>
