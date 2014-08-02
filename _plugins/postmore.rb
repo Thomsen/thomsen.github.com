@@ -9,3 +9,5 @@ module PostMore
 end
 
 Liquid::Template.register_filter(PostMore)
+
+## use {{ post.content | postmorefilter: post.url, "continue reading>>" }} 
