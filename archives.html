@@ -1,0 +1,20 @@
+---
+layout: page
+title: Archives
+---
+
+{% include baidu-cse.html %}
+
+<article class="archive">
+
+  <div id="archives">
+    <ul>
+    {% for post in site.posts %}
+        <li>
+        {{ post.date | date: "%b %d, %Y" }} &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+    {% endfor %}  <!-- liquid -->
+    </ul>
+  </div>
+
+</article>
