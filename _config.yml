@@ -11,6 +11,7 @@ tagline:          'Image In the Mind'
 description:      ''
 url:              http://thomsen.github.com
 baseurl:          '/'
+safe:             false
 paginate:         5
 
 author:
