@@ -15,12 +15,15 @@ title: Home
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
     {% if post.content contains '<!-- more -->' %}
-        <!-- {{ post.content | postmorefilter: post.url, "  continue reading" }} -->
         {{ post.content | split:'<!-- more -->' | first }}
         <p><a href="{{ post.url }}">continue reading>></a></p>
     {% else %}
-        {{ post.excerpt }}
-        <p><a href="{{ post.url }}">continue reading>></a></p>
+        {% if post.content | size > 300 %}
+            {{ post.excerpt }}
+            <p><a href="{{ post.url }}">continue reading>></a></p>
+        {% else %}
+            {{ post.content }}
+        {% endif %}
     {% endif %}
 
   </div>
