@@ -54,3 +54,4 @@ $ sudo apt-get install markdown
 * C-c C-c m 在另一个缓冲区预览html格式
 * C-c C-c p 在浏览器中进行预览
 
+{{ page.date | date_to_string }}
