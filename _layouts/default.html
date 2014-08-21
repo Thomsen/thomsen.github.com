@@ -5,46 +5,43 @@
 
   <body>
 
-    {% include sidebar.html %}
-
-
-	
 	<div class="navbar navbar-fixed-top navbar-inverse" >
-	
 	  <div class="navbar-inner">
-	  
-	      <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+
+		{% include sidebar.html %}	  
+	    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="/" title="Home">{{ site.title }}</a>
-            <small>{{ site.tagline }}</small>
-          </h3>
-        </div>
-      </div>	 
-    </div>
+		<div class="wrap">
+		  <div class="masthead">
+			<div class="container">
+			  <h3 class="masthead-title">
+				<a href="/" title="Home">{{ site.title }}</a>
+				<small>{{ site.tagline }}</small>
+			  </h3>
+			</div>
+		  </div>	 
+		</div>
 	  
 	    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 	      <span class="icon-bar"></span>
 	      <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
 	    </a>  
 	    <div class="nav-collapse">
 	      <span>{{node.url}}</span>
 	      <ul class="nav">
-		{% assign pages_list = site.pages %}
-		{% for node in pages_list %}
-		  {% if node.title != null %}
-			{% if node.layout == "page" %}
-			  <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-			{% endif %}
-		  {% endif %}
-		{% endfor %}
+			{% assign pages_list = site.pages %}
+			{% for node in pages_list %}
+			  {% if node.title != null %}
+				{% if node.layout == "page" %}
+				  <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+				{% endif %}
+			  {% endif %}
+			{% endfor %}
 	      </ul>
 	    </div>
-        </div>
+       </div>
+	 </div>
 	  
      <div class="container">
         {{ content }}
