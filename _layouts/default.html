@@ -23,9 +23,7 @@
 			{% for node in pages_list %}
 			  {% if node.title != null %}
 				{% if node.layout == "page" %}
-				  <li class="active">
-				    <a class="active" href="{{ node.url }}">{{ node.title }}</a>
-				  </li>
+				  <a class="active" href="{{ node.url }}">{{ node.title }}</a>
 				{% endif %}
 			  {% endif %}
 			{% endfor %}
