@@ -342,6 +342,7 @@ div.content div#page-index {
 /* Layout */
 /* line 2, ../_sass/_responsive.scss */
 .navbar {
+  background-color: #222;
   margin-bottom: 0;
 }
 /* line 4, ../_sass/_responsive.scss */
