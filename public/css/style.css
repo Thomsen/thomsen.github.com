@@ -83,6 +83,28 @@ hr {
   height: 1px;
 }
 
+/* Layout */
+/* line 81, ../_sass/_base.scss */
+.navbar {
+  margin-bottom: 0;
+}
+/* line 83, ../_sass/_base.scss */
+.navbar div.navbar-inner {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+/* line 85, ../_sass/_base.scss */
+.navbar div.navbar-inner a.brand {
+  padding: 8px 20px;
+}
+/* line 90, ../_sass/_base.scss */
+.navbar div.navbar-inner ul.nav:first-child li a {
+  padding: 12px 10px 8px;
+}
+
 /* line 99, ../_sass/_base.scss */
 .container > footer {
   margin-top: 20px;
@@ -201,6 +223,26 @@ a.btn.disabled, a.btn.disabled.disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
+
+.sidebar {
+  width: 270px;  
+}
+
+.sidebar.affix {
+  top: 40px;
+}
+.sidebar.affix-bottom {
+  position: fixed;
+  bottom: 130px;
+}
+
+
+.sidebar-title {
+  margin: 10px 0;
+  line-height:32px;
+  border-bottom: 1px solid #999;
+}
+
 .category-list {
   padding: 0 5px;
   list-style: none;
@@ -209,6 +251,14 @@ a.btn.disabled, a.btn.disabled.disabled {
 
 .category-list li {
   line-height: 28px;
+}
+
+@media (max-width: 767px) {
+  .sidebar.affix {
+    position: static;
+    width: auto;
+    top: 0;
+  }
 }
 
 /* Tags */
@@ -294,7 +344,14 @@ div.content div#page-index {
 .navbar {
   margin-bottom: 0;
 }
-
+/* line 4, ../_sass/_responsive.scss */
+.navbar div.navbar-inner {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
 /* line 7, ../_sass/_responsive.scss */
 .navbar ul.social {
   /* Hide social menu on low-res screens */
@@ -363,4 +420,30 @@ div.posts article div.date time {
   -o-border-radius: 5px;
   border-radius: 5px;
   padding: 5px 10px;
+}
+
+/* This is for your site's custom styling */
+/* line 3, ../_sass/_custom.scss */
+div.sidebar section {
+  background: #202020;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+  -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 15px;
+}
+/* line 12, ../_sass/_custom.scss */
+div.sidebar section img.icon {
+  float: left;
+  margin: 7px 15px 0 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
 }
