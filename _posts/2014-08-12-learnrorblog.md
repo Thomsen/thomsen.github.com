@@ -53,10 +53,11 @@ title: RoR 入门学习
    在控制器中添加index方法，并创建对应的index视图。
 5. 添加不同页面的链接  
     {% highlight ruby %}<%= link_to "link desc", url %>{% endhighlight %}
+   url说明，  
 6. 添加校验  
    对模型中的一些字段可以相应的添加一些校验，如一些必填，长度限制等。提供了校验规则后，还需要在页面中对不符合规则给出相应的提示。  
    {% highlight ruby %} <% if @post.errors.any? %> {% endhighlight %}
-   报undefined method `errors' for nil:NilClass，是因为在controlllers中的对应页面方法中，没有定义@post变量。
+   报undefined method `errors' for nil:NilClass，是因为在controlllers中的对应页面方法中，没有定义@post变量。  
 7. 显示和编辑  
 8. 嵌入页面  
    使用render关键字  
