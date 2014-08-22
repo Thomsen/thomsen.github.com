@@ -83,28 +83,6 @@ hr {
   height: 1px;
 }
 
-/* Layout */
-/* line 81, ../_sass/_base.scss */
-.navbar {
-  margin-bottom: 0;
-}
-/* line 83, ../_sass/_base.scss */
-.navbar div.navbar-inner {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-}
-/* line 85, ../_sass/_base.scss */
-.navbar div.navbar-inner a.brand {
-  padding: 8px 20px;
-}
-/* line 90, ../_sass/_base.scss */
-.navbar div.navbar-inner ul.nav:first-child li a {
-  padding: 12px 10px 8px;
-}
-
 /* line 99, ../_sass/_base.scss */
 .container > footer {
   margin-top: 20px;
@@ -316,14 +294,7 @@ div.content div#page-index {
 .navbar {
   margin-bottom: 0;
 }
-/* line 4, ../_sass/_responsive.scss */
-.navbar div.navbar-inner {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-}
+
 /* line 7, ../_sass/_responsive.scss */
 .navbar ul.social {
   /* Hide social menu on low-res screens */
@@ -393,4 +364,3 @@ div.posts article div.date time {
   border-radius: 5px;
   padding: 5px 10px;
 }
-
