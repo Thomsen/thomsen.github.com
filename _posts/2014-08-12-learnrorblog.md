@@ -20,7 +20,7 @@ title: RoR 入门学习
     rvm use 2.0.0-p353@rails414  
    这样就通过rvm对ruby和rails对应起来进行管理。
 
-   <!-- more -->
+<!-- more -->
 
 2. 运行项目  
     `$ rails server`  
@@ -61,3 +61,6 @@ title: RoR 入门学习
 8. 嵌入页面  
    使用render关键字  
 9. 删除  
+
+
+{{ page.date | date_to_string }}
