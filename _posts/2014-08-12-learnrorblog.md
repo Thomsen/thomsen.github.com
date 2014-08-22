@@ -14,8 +14,8 @@ title: RoR 入门学习
    首先创建rails的别名    
     `$ rvm gemset create rails414`  
    创建别名后，再使用ruby和别名的版本，最后安装rails对应的版本  
-    `$ rvm use 2.0.0-p353@rails414
-    $ gem install rails -v 4.1.4`  
+    `$ rvm use 2.0.0-p353@rails414`    
+    `$ gem install rails -v 4.1.4`  
    在.rvmrc文件中添加  
     rvm use 2.0.0-p353@rails414  
    这样就通过rvm对ruby和rails对应起来进行管理。
@@ -59,5 +59,5 @@ title: RoR 入门学习
    报undefined method `errors' for nil:NilClass，是因为在controlllers中的对应页面方法中，没有定义@post变量。
 7. 显示和编辑  
 8. 嵌入页面  
-   使用render关键字
+   使用render关键字  
 9. 删除  
