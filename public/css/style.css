@@ -342,7 +342,6 @@ div.content div#page-index {
 /* Layout */
 /* line 2, ../_sass/_responsive.scss */
 .navbar {
-  background-color: #222;
   margin-bottom: 0;
 }
 /* line 4, ../_sass/_responsive.scss */
@@ -352,6 +351,7 @@ div.content div#page-index {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
+  background-color: #222;
 }
 /* line 7, ../_sass/_responsive.scss */
 .navbar ul.social {
