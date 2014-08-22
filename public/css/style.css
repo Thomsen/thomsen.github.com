@@ -12,7 +12,7 @@ body {
   color: #ddd;
   text-shadow: 1px 1px 1px #000;
   height: 100%;
-  margin-top: 40px;
+  margin-top: 0px;
   font: normal 14px Tahoma,'Microsoft YaHei',Helvetica,sans-serif
 }
 
@@ -316,7 +316,7 @@ div.content div#page-index {
 
   /* line 23, ../_sass/_responsive.scss */
   div.container {
-    padding: 0px 0px;
+    padding: 0px 20px;
   }
   /* line 25, ../_sass/_responsive.scss */
   div.container div.page-header {
