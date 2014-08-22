@@ -15,10 +15,7 @@
 		  <h3 class="masthead-title">
 			<a href="/" title="Home">{{ site.title }}</a>
 			<small>{{ site.tagline }}</small>
-		  </h3>
-		  <div class="nav-collapse">
-		  <span>{{node.url}}</span>
-		  <ul class="nav">
+			<ul class="nav">
 			{% assign pages_list = site.pages %}
 			{% for node in pages_list %}
 			  {% if node.title != null %}
@@ -27,8 +24,8 @@
 				{% endif %}
 			  {% endif %}
 			{% endfor %}
-		  </ul>
-		</div>
+			</ul>
+		  </h3>		  	  
 		</div>
 	  </div>	 
 	 </div>
