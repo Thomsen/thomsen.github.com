@@ -1083,6 +1083,10 @@
     border-top-color: #111111;
     border-bottom-color: #111111;
   }
+  .nav_collapse {
+	position: relative;
+	margin-left: 20px;
+  }
   .navbar .nav-collapse .nav.pull-right {
     float: none;
     margin-left: 0;
