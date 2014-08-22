@@ -15,20 +15,20 @@
 		  <h3 class="masthead-title">
 			<a href="/" title="Home">{{ site.title }}</a>
 			<small>{{ site.tagline }}</small>
-		  </h3>		
-		  <div class="nav pull-right social visible-desktop">
-		     <ul class="divider-vertical">
-			   {% assign pages_list = site.pages %}
-			    {% for node in pages_list %}
-			      {% if node.title != null %}
+		  </h3>				  
+		</div>		
+		<div class="nav pull-right social visible-desktop">
+		   <ul class="divider-vertical">
+			 {% assign pages_list = site.pages %}
+			 {% for node in pages_list %}
+			    {% if node.title != null %}
 				    {% if node.layout == "page" %}
 				      <a class="active" href="{{ node.url }}">{{ node.title }}</a>
 				    {% endif %}
-			      {% endif %}
-			    {% endfor %}
-		      </ul>
-		  </div>
-		</div>		
+			    {% endif %}
+			 {% endfor %}
+		   </ul>
+		</div>
 	  </div>	 
 	 
       <div class="container">
