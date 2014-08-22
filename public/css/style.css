@@ -448,6 +448,6 @@ div.sidebar section img.icon {
   border-radius: 5px;
 }
 
- .nav-collapse .nav > .divider-vertical {
+.pull-right {
    padding: 0rem, 0.65rem;
  }
