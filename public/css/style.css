@@ -223,26 +223,6 @@ a.btn.disabled, a.btn.disabled.disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
-
-.sidebar {
-  width: 270px;  
-}
-
-.sidebar.affix {
-  top: 40px;
-}
-.sidebar.affix-bottom {
-  position: fixed;
-  bottom: 130px;
-}
-
-
-.sidebar-title {
-  margin: 10px 0;
-  line-height:32px;
-  border-bottom: 1px solid #999;
-}
-
 .category-list {
   padding: 0 5px;
   list-style: none;
@@ -251,14 +231,6 @@ a.btn.disabled, a.btn.disabled.disabled {
 
 .category-list li {
   line-height: 28px;
-}
-
-@media (max-width: 767px) {
-  .sidebar.affix {
-    position: static;
-    width: auto;
-    top: 0;
-  }
 }
 
 /* Tags */
@@ -422,28 +394,3 @@ div.posts article div.date time {
   padding: 5px 10px;
 }
 
-/* This is for your site's custom styling */
-/* line 3, ../_sass/_custom.scss */
-div.sidebar section {
-  background: #202020;
-  background-color: rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
-  -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
-  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  padding: 15px;
-}
-/* line 12, ../_sass/_custom.scss */
-div.sidebar section img.icon {
-  float: left;
-  margin: 7px 15px 0 0;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-}

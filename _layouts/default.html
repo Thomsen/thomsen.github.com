@@ -22,11 +22,9 @@
 			 {% assign pages_list = site.pages %}
 			 {% for node in pages_list %}
 			    {% if node.title != null %}
-					<li class="active">
 				    {% if node.layout == "page" %}
 				      <a class="active" href="{{ node.url }}">{{ node.title }}</a>
 				    {% endif %}
-					</li>
 			    {% endif %}
 			 {% endfor %}
 		   </ul>
