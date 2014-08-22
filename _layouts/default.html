@@ -5,42 +5,42 @@
 
   <body>
     
-	{% include sidebar.html %}
+    {% include sidebar.html %}
 	
-	 <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-	 content to avoid any CSS collisions with our real content. -->
-	 <div class="wrap">
-	  <div class="masthead">    	  
-		<div class="container">
-		  <h3 class="masthead-title">
-			<a href="/" title="Home">{{ site.title }}</a>
-			<small>{{ site.tagline }}</small>
-		  </h3>				  
-		</div>
-		<div class="navbar navbar-fixed-top navbar-inverse">
-		    <div class="nav-collapse">
-			  <div class="nav pull-right social visible-desktop">
-			   <ul class="divider-vertical">
-				 {% assign pages_list = site.pages %}
-				 {% for node in pages_list %}
-					{% if node.title != null %}
-						{% if node.layout == "page" %}
-						  <a class="active" href="{{ node.url }}">{{ node.title }}</a>
-						{% endif %}
-					{% endif %}
-				 {% endfor %}
-			   </ul>
-			  </div>
-			</div>
-		 </div> 
-	  </div>	 
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">    	  
+        <div class="container">
+          <h3 class="masthead-title">
+	    <a href="/" title="Home">{{ site.title }}</a>
+	    <small>{{ site.tagline }}</small>
+          </h3>				  
+        </div>
+        <div class="navbar navbar-fixed-top navbar-inverse">
+          <div class="nav-collapse">
+	    <div class="nav pull-right social visible-desktop">
+	    <ul class="divider-vertical">
+              {% assign pages_list = site.pages %}
+	      {% for node in pages_list %}
+	        {% if node.title != null %}
+	          {% if node.layout == "page" %}
+	            <a class="active" href="{{ node.url }}">{{ node.title }}</a>
+	          {% endif %}
+		{% endif %}
+	      {% endfor %}
+	    </ul>
+	    </div>
+	  </div>
+        </div> 
+      </div>	 
 	 
       <div class="container content">
-        {{ content }}
+          {{ content }}
       </div>
     </div>
 
-	<label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 	
     <script>
       (function(document) {

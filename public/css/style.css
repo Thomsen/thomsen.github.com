@@ -448,3 +448,7 @@ div.sidebar section img.icon {
   border-radius: 5px;
 }
 
+.navbar .divider-vertical {
+    margin: 15px 20px 0 0 !important;  /* top right bottom left */
+    padding: 15px 15px 0 0 !important; 
+}
