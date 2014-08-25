@@ -53,7 +53,7 @@ title: RoR 入门学习
    在控制器中添加index方法，并创建对应的index视图。
 5. 添加不同页面的链接  
     {% highlight ruby %}<%= link_to "link desc", url %>{% endhighlight %}
-    url说明，  
+   url说明，  
 6. 添加校验  
    对模型中的一些字段可以相应的添加一些校验，如一些必填，长度限制等。提供了校验规则后，还需要在页面中对不符合规则给出相应的提示。  
    {% highlight ruby %} <% if @post.errors.any? %> {% endhighlight %}
@@ -61,7 +61,28 @@ title: RoR 入门学习
 7. 显示和编辑  
 8. 嵌入页面  
    使用render关键字  
-9. 删除  
+9. 删除
 
+#### 知识点 ####
+<%= %> 输出一个变量的值  
+<% %> 执行脚本命令，如条件  
+在4.1.4中使用<% %>需要使用<%= %>  
+
+### 调试项目 ###
+* 如何调试erb  
+  使用Aptana Studio 3进行调试，出现问题:  
+  Configured browser /usr/bin/iceweasel does not support debugging. Current only Firefox is supported.  
+  正常选择的浏览器有chrome、firefox、opera、ie、safari、netscape。使用opera同样出现上述的问题。
+  需要安装ruby-debug-ide  
+    `$ gem sources a url`  
+    `$ gem install ruby-debug-ide`  
+  但是在linux下，aptana studio 3的gear仍然没能出现Debug Server。_是由于没有建立rails project，web project无该选项_。  
+  aptana studio运行rails server，需要script/rails。但是4.1.4版本script已经改为了bin，这样就无法运行rails server。  
+  解决方案：**新建script目录，将bin/rails拷贝到script下。  
+  debug运行，出现cannot load such file -- debase (LoadError)。需要安装debase  
+    `$ gem install debase`  
+  这样，debug server就可以调试erb。  
 
 {{ page.date | date_to_string }}
+
+
