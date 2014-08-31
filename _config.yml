@@ -23,6 +23,7 @@ version:          0.6.0
 homedesc:         首页
 srcdesc:          项目源码
 versiondesc:      当前版本：
+moredesc:         继续阅读
 
 github:
   repo:           https://www.github.com/Thomsen/thomsen.github.com
