@@ -6,13 +6,14 @@ title: Emacs Markdown模式
 markdown的安装与配置
 ----------------------
 
-emacs 通过elpa插件管理进行安装，新建一个el文件init-markdown.el  
+emacs 通过elpa插件管理进行安装，新建一个el文件init-markdown.el
 
-    (require-package 'markdown-mode)  
-    (setq auto-mode-alist  
-        (cons '("\\.\\(md\\|markdown\\)\\'" . markdown-mode) auto-mode-alist))
-    (provide 'init-markdown)  
-
+``` lisp
+(require-package 'markdown-mode)
+(setq auto-mode-alist  
+    (cons '("\\.\\(md\\|markdown\\)\\'" . markdown-mode) auto-mode-alist))
+(provide 'init-markdown)  
+```
 这样，当emacs打开一个后缀为md或markdown的文件，就会自动启动markdown模式。
 
 <!-- more -->
@@ -70,14 +71,24 @@ markdown的编辑命令
   Buffer-wide commands (C-c C-c m)  
   List editing  
   Mobement  
-  Alternative keys (in case of problems with the arrow keys)  
+  Alternative keys (in case of problems with the arrow keys)
+
+语法高亮：
+通过jekyll默认的使用pygments实现语法高亮，区块上要有空行，前面不需要空格。  
+\`\`\` language  
+\`\`\`
+
+或
+
+{% highlight sh %}
+{% endhighlight %}
   
 
 ### 无命令模式 ###
 
 #### 区块元素 ####
-+ 段落和换行， 换行通过两个以上的空格实现;
-+ 列表，主要分为无序列表（*、+、-）和有序列表（1.），与段落间要有空行(或换行），不让会当作段落处理；有序列表时要注意段落的开头要和列表的缩进保持一致，不然就不会称为有序列表；
++ 段落和换行， 空一行就是下一个段落的开始，换行通过两个以上的空格实现。用空格实现强迫换行，会使段落的缩进比较难看;
++ 列表，主要分为无序列表（*、+、-）和有序列表（1.），与段落间要有空行(或换行），不让会当作段落处理；有序列表时要注意段落的开头要和列表的缩进保持一致，不然就不会形成有序列表；
 + 代码区块，建立缩进通过4个空格或1个制表符
 
 #### 区段元素 ####
