@@ -20,7 +20,7 @@ title: 首页
     {% else %}
         {% if post.content | size > 300 %}
             {{ post.excerpt }}
-            <p><a href="{{ post.url }}">{{ site.moredesc }}</a></p>
+            <p><a href="{{ post.url }}">{{ site.moredesc }}>></a></p>
         {% else %}
             {{ post.content }}
         {% endif %}
