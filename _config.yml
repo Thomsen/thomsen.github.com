@@ -1,5 +1,5 @@
 # Dependencies
-markdown:         redcarpet
+markdown:         redcarpet # redcarpet, rdiscount, kramdown, maruku
 pygments:         true
 
 # Permalinks
