@@ -1,6 +1,8 @@
 ---
 layout: default
 title: 域名申请
+category: 网站
+tags: [域名]
 ---
 
 域名作为个人或组织在网络上的标识，是一种身份的象征。
