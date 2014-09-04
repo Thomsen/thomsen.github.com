@@ -73,5 +73,82 @@ rails执行查询是大多数情况下，无需直接使用SQL。
 视图(V)
 ==
 
+Action View是Action Pack的一个主要组件。请求由Action Pack分两步处理，其中一步交给视图（渲染视图）。Action View用来构建响应，由嵌入html的ruby代码编写。为了保证模板代码的简洁明了，Action View提供了很多帮助方法，用来构建表单、日期和字符串等。Action View并不依赖Action Record，有独立的代码库，可以再任何Ruby代码库中使用。
+
+每个控制器在app/views中都对应一个文件夹，用来保存该控制器的模板文件。模板文件的作用是显示控制器动作的视图。
+
+* 模板
+
+模板可使用多种语言编写。如.erb是由erb和html，.builder是由Builder::XmlMarkup。erb中<% %>引入无返回值的ruby代码，<%= %>引入有输出结果的ruby代码。builder需要更多地编程，特别适合生成xml文档，可以直接使用名为xml的XmlMarkup对象。默认情况下，rails会把各个模板都编译成一个方法，这样才能渲染视图。
+
+* 局部布局
+
+局部视图把整个渲染过程分成多个容易管理的代码片段。想在视图中使用局部视图，可以调用render方法。局部视图的一种用法是作为子程序，把细节从视图中移出，这样能更好的理解视图的作用。render的几种操作，as（本地变量指定不同的名字）、object（直接在局部视图中使用对象）、collection（渲染集合）、spacer_template（间隔模板）。
+
+* 布局
+
+布局用来渲染rails控制器动作的页面整体结构。指定控制器所用布局，使用layout方法。`layout "page" 使用app/views/layouts/page.html.erb文件作为布局。指定布局同时可以使用:only和:except选项，作为条件布局。
+
+
+除了能够渲染视图外，还能够渲染文本、HTML、JSON、XML、普通的JavaScript、原始的主体（body）。render能够接收:content_type、:layout、:location、：status四个选项。
+
+渲染视图时，会把视图和当前模板结合起来。布局中可以使用三种工具把各部分结合在一起组成完整的响应：
+> - 静态资源标签（auto_discovery_link_tag、javascript_include_tag、stylesheet_link_tag、image_tag、video_tag、audio_tag）
+> - yield和content_for（yiled标明一个区域，渲染的视图会插入这里。content_for在布局的具名yield区域插入内容）
+> - 局部视图
+
+* 表单
+
+页面中最常见的是表单，最基本的表单帮助方法时form\_tag。表单的一个特别常见的用途是编辑或创建模型对象。这时可以使用*\_tag帮助方法，但太麻烦了，每个元素都要设置正确的参数名称和默认值。rails提供很多帮助方法可以简化这一过程，例如text\_field（text\_field_tag)和text\_area。还有更好的方式，将表当绑定到对象上，可以使用form\_for。
+
+rails框架建议使用rest架构设计程序，因此除了get和post请求之外，还要处理patch和delete请求。但大多数浏览器不支持表单中提交get和post之外的请求。rails使用post请求进行模拟，并在表单中加入\_method的隐藏字段，其值表示真正希望使用的请求方法。使用select和option标签快速创建选择列表。表单中上传文件，表单的编码必须设为"multipart/form-data"。
+
 控制器(C)
 ===
+
+Action Controller是Action Pack的另一个主要组件。请求有Action Pack分两步处理，其中一步交给控制器（逻辑处理）。Action Controller的作用是和数据库通信，根据需要执行CRUD操作。路由决定使用哪个控制器处理请求，控制器负责解析请求，生成对应的请求。
+
+从控制器的角度，创建http的响应由三种方式：
+> - 调用render方法，向浏览器发送一个完整的响应
+> - 调用redirect_to方法，向浏览器发送一个http重定向状态吗
+> - 调用head方法，向浏览器发送只含报头的响应
+
+执行到redirect_to方法时，代码会停止运行，等待浏览器发起新的请求。并需要告诉浏览器下一个请求是什么，并返回302状态码（临时重定向）。
+
+控制器的命名习惯是，最后一个单词使用复数形式，但也有例外（ApplicationController)。程序接收到请求时，路由决定运行哪个控制器和哪个动作，然后创建该控制器的实例，运行和动作同名的方法。在控制器的动作中，往往需要获取用户发送的数据，或其他参数。在网页程序中参数分为两类：
+> * 第一类随URL发送，叫做”请求参数”，即URL中?符号后面的部分
+> * 第二类经常成为“POST”数据， 一般来自用户填写的表单
+
+rails不区分这两种参数，在控制器中都可以通过params hash获取。
+
+* 参数
+
+参数可分为hash数组参数、json参数、路由参数、健壮参数
+
+加入健壮参数功能后，action controller的参数禁止在active model中批量赋值，除非参数在白名单中。你需要明确选择那些属性可以批量更新，避免意外把不该暴露的属性暴露了。允许使用标量值，若params中有:id，且:id是标量值，就可以通过白名单检查（permit)，否则:id会被过滤掉。嵌套参数，也可以传入嵌套参数。
+
+* 会话
+
+程序中的每个用户都是一个会话，可以存储少量数据，在多次请求中永久存储。会话只能在控制器和视图中使用，CookieSotre、CacheStore、ActiveRecordStore、MemCacheStore。rails不允许在url中传递会话id，这么做不安全。
+
+* Cookies
+
+程序可以再客户端存储少量数据（称为cookie），在多次请求中使用，甚至可以用作会话。删除会话中的数据是把键的值设为nil，但要删除cookie中的值，要使用cookies.delete(:key)方法。
+
+* 其他
+
+过滤器（filter）是一些方法，在控制器动作运行之前、之后、或者前后运行。过滤器会继承，如果在ApplicationController中定义过滤器，那么程序的每个控制器都可以使用。
+
+跨站请求伪造（CSRF)是一种工具方式，A网站的用户伪装成B网站的用户发送请求，在B站中添加、修改或删除数据，而B站的用户绝然不知。防止这种攻击的第一步是，确保所有析构动作（create，update和destroy）只能通过get之外的请求方式访问。如果遵从REST架构，已经完成了这一步。我们还需要添加一个只有自己的服务器才知道的难以猜测的令牌，去禁止访问。
+
+每个控制器都有两个存取方法，分别用来获取当前请求的请求对象（request）和响应对象（response）。
+
+Rails内建了两种http身份认证方式，基本认证（http\_basic\_authenticate\_with)和摘要认证(authenticate\_or\_request\_with\_http\_digest)。
+
+所有控制器都可以使用send\_data和send\_file方法将文件以数据流发送给用户。
+
+捕获错误后如果想要更详尽的处理，可以使用rescue\_form。rescue\_form可以处理整个控制器及其子类中的某种（或多种）异常。
+
+有时，基于安全考虑，可能希望某个控制器只能通过https协议访问。为了达到这个目的，可以在控制器中使用force_ssl方法。也可指定:only和：except选项。
+
+路由映射，resources会创建七种不同的路由：GET(all)、GET(new)、POST(create)、GET(:id)、GET(:id edit)、PATCH/PUT(:id udpate)、DELETE(:id destroy)。resource单数路由，会生成六中路由，除GET(all)。嵌套路由，resources do end。路由中还可以构建REST架构动作（成员路由、集合路由，额外新建动作的路由）。除资源式路由外，还有非资源式路由get。
