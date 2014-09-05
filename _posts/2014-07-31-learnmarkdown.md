@@ -18,7 +18,7 @@ emacs 通过elpa插件管理进行安装，新建一个el文件init-markdown.el
     (cons '("\\.\\(md\\|markdown\\)\\'" . markdown-mode) auto-mode-alist))
 (provide 'init-markdown)  
 ```
-这样，当emacs打开一个后缀为md或markdown的文件，就会自动启动markdown模式。
+这样，当emacs打开一个后缀为md或markdown的文件，就会自动启动markdown模式。[Standard Makdown](http://standardmarkdown.com/)
 
 <!-- more -->
 

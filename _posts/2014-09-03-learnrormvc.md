@@ -15,6 +15,7 @@ rails的指导思想：
 
 rails为大多数需求都提供了最好的解决方法，使用这些默认的约定，不用在长长的配置文件中设置每个细节。
 
+<!-- more -->
 
 模型(M)
 ==
@@ -83,18 +84,18 @@ Action View是Action Pack的一个主要组件。请求由Action Pack分两步�
 
 * 局部布局
 
-局部视图把整个渲染过程分成多个容易管理的代码片段。想在视图中使用局部视图，可以调用render方法。局部视图的一种用法是作为子程序，把细节从视图中移出，这样能更好的理解视图的作用。render的几种操作，as（本地变量指定不同的名字）、object（直接在局部视图中使用对象）、collection（渲染集合）、spacer_template（间隔模板）。
+局部视图把整个渲染过程分成多个容易管理的代码片段。想在视图中使用局部视图，可以调用render方法。局部视图的一种用法是作为子程序，把细节从视图中移出，这样能更好的理解视图的作用。render的几种操作，as（本地变量指定不同的名字）、object（直接在局部视图中使用对象）、collection（渲染集合）、spacer\_template（间隔模板）。
 
 * 布局
 
 布局用来渲染rails控制器动作的页面整体结构。指定控制器所用布局，使用layout方法。`layout "page" 使用app/views/layouts/page.html.erb文件作为布局。指定布局同时可以使用:only和:except选项，作为条件布局。
 
 
-除了能够渲染视图外，还能够渲染文本、HTML、JSON、XML、普通的JavaScript、原始的主体（body）。render能够接收:content_type、:layout、:location、：status四个选项。
+除了能够渲染视图外，还能够渲染文本、HTML、JSON、XML、普通的JavaScript、原始的主体（body）。render能够接收:content\_type、:layout、:location、：status四个选项。
 
 渲染视图时，会把视图和当前模板结合起来。布局中可以使用三种工具把各部分结合在一起组成完整的响应：
-> - 静态资源标签（auto_discovery_link_tag、javascript_include_tag、stylesheet_link_tag、image_tag、video_tag、audio_tag）
-> - yield和content_for（yiled标明一个区域，渲染的视图会插入这里。content_for在布局的具名yield区域插入内容）
+> - 静态资源标签（auto\_discovery\_link\_tag、javascript\_include\_tag、stylesheet\_link\_tag、image\_tag、video\_tag、audio\_tag）
+> - yield和content\_for（yiled标明一个区域，渲染的视图会插入这里。content\_for在布局的具名yield区域插入内容）
 > - 局部视图
 
 * 表单
@@ -110,7 +111,7 @@ Action Controller是Action Pack的另一个主要组件。请求有Action Pack�
 
 从控制器的角度，创建http的响应由三种方式：
 > - 调用render方法，向浏览器发送一个完整的响应
-> - 调用redirect_to方法，向浏览器发送一个http重定向状态吗
+> - 调用redirect\_to方法，向浏览器发送一个http重定向状态吗
 > - 调用head方法，向浏览器发送只含报头的响应
 
 执行到redirect_to方法时，代码会停止运行，等待浏览器发起新的请求。并需要告诉浏览器下一个请求是什么，并返回302状态码（临时重定向）。
