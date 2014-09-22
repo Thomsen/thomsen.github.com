@@ -25,6 +25,9 @@ srcdesc:          项目源码
 versiondesc:      当前版本：
 moredesc:         继续阅读
 
+image:
+  path:           /public/images
+
 github:
   repo:           https://www.github.com/Thomsen/thomsen.github.com
 

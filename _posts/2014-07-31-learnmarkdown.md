@@ -74,9 +74,9 @@ C-c C-a w （markdown-insert-wiki-link） [[维基]]
 
 * 插入图片
 
-C-c C-i i (makrdown-insert-image) ![图片]()
+C-c C-i i (makrdown-insert-image) !![说明]()
 
-C-c C-i I (markdown-insert-reference-image) ![图片][]
+C-c C-i I (markdown-insert-reference-image) ![说明][id]
   
 * 插入样式  
 
