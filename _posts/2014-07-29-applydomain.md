@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 域名申请
-category: Web
+category: 网站
 tags: [域名]
 ---
 

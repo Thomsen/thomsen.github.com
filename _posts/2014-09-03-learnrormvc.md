@@ -1,7 +1,7 @@
 ---
 layout: default
 title: RoR MVC
-category: Web
+category: 网站
 tags: [ruby, rails, mvc]
 ---
 

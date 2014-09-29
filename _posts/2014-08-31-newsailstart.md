@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 新的启航
-category: DevOps
+category: 计划
 tags: [计划]
 ---
 

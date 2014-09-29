@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Emacs Markdown模式
-category: Others
+category: 工具
 tag: [emacs, markdown]
 ---
 

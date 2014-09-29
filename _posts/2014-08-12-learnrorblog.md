@@ -1,7 +1,7 @@
 ---
 layout: default
 title: RoR 入门学习
-category: Web
+category: 网站
 tag: [ruby, rails]
 ---
 

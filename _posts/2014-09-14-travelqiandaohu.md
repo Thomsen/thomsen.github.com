@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 千岛湖之行
-category: Life
+category: 旅行
 tags: [旅行]
 ---
 
