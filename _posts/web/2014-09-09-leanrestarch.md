@@ -1,7 +1,7 @@
 ---
 layout: default
 title: REST 架构
-category: 设计
+category: Web
 tags: [设计，架构]
 ---
 
