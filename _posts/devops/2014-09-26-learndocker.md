@@ -1,7 +1,7 @@
 ---
 title: Docker 入门
 layout: default
-category:
+category: DevOps
 tags: []
 ---
 
