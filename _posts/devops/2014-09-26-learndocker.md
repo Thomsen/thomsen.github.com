@@ -79,3 +79,5 @@ $ sudo docker run -t -i ubuntu:14.04 /bin/bash
 ```
 
 docker run -t -i，进入对应镜像的交互界面。
+
+stop container 后 delete ，不让rmi image 会报container using it。
