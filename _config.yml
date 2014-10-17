@@ -1,6 +1,6 @@
 # Dependencies
 markdown:         redcarpet  # redcarpet, rdiscount, kramdown, maruku
-highlighter:         true  # pygments rename to highlighter
+highlighter:      true  # pygments rename to highlighter
 
 # Permalinks
 permalink:        pretty
@@ -19,7 +19,7 @@ author:
   url:            https://
 
 # Custom vars
-version:          0.7.5
+version:          0.7.6
 homedesc:         首页
 srcdesc:          项目源码
 versiondesc:      当前版本：

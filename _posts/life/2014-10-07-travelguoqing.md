@@ -1,8 +1,9 @@
 ---
 layout: default
 title: 2014国庆之行
-category: 旅游
+category: Life
 tags: []
+hidden: false
 ---
 
 计划安排

@@ -5,6 +5,9 @@ title: 首页
 
 <div class="posts">
   {% for post in paginator.posts %}
+  {% if post.hidden %}
+  
+  {% else %}
   <div class="post">
     <h1 class="post-title">
       <a href="{{ post.url }}">
@@ -27,6 +30,7 @@ title: 首页
     {% endif %}
 
   </div>
+  {% endif %}
   {% endfor %}
 </div>
 
