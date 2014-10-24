@@ -116,7 +116,7 @@ url说明，通过rake routes查看uri映射。可以得到prefix，使用prefix
 
 * 嵌入页面
 
-使用render关键字
+使用render关键字，render只是简单的页面渲染，并不会发送任何请求，不会执行action请求或重新加载服务器数据。
 
 * 删除
 

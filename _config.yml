@@ -20,6 +20,7 @@ author:
 
 # Custom vars
 version:          0.7.6
+hidden:           true
 homedesc:         首页
 srcdesc:          项目源码
 versiondesc:      当前版本：
