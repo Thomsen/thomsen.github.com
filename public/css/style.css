@@ -3,6 +3,14 @@
 /* Compass Vars */
 /* Override some defaults */
 /* line 13, ../_sass/_base.scss */
+@font-face {
+	font-family: 'Source Han Sans';
+	font-style: normal;
+	font-weight: normal;
+	src: url('SourceHanSansSC-Normal.otf');
+	unicode-range: U+0-U+10FFFF;
+}
+
 html {
   background-color: #222;
 }
@@ -13,7 +21,7 @@ body {
   text-shadow: 1px 1px 1px #000;
   height: 100%;
   margin-top: 0px;
-  font: normal 14px Tahoma,'Microsoft YaHei',Helvetica,sans-serif
+  font: normal 14px 'Source Han Sans', Tahoma,'Microsoft YaHei', Helvetica, sans-serif
 }
 
 /* line 26, ../_sass/_base.scss */
