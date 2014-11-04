@@ -1,19 +1,17 @@
 ---
 layout: default
 title: Heroku部署Rails项目
-category: devopts
+category: DevOps
 tag: []
 ---
 
-简介
-===
+### 简介 ###
 
 Heroku是云计算平台，提供免费的云空间，当然要想有好的性能还是要付出的。同类型的还有OpenShift，只是OpenShift支持的语言更多。Heroku现在支持部署的应用有ruby、php、js、python、java、clojure、scale。使用前需要在[官网](http://signup.heroku.com)上注册一个免费账户。
 
 
 
-部署Rails
-===
+### 部署项目 ###
 
 #### 前提条件 ####
 * 免费的Heroku账号
@@ -116,3 +114,4 @@ $ heroku domains:add mibo.thomsen.wang
 
 ```
 
+访问[Mibo](http://mibo.thomsen.wang)
