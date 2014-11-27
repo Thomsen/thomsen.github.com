@@ -116,3 +116,16 @@ $ heroku domains:add mibo.thomsen.wang
 ```
 
 访问[Mibo](http://mibo.thomsen.wang)
+
+
+### 问题 ###
+
+Heroku是一个“只读”的平台，所以类似的附件上传是无法实现的。要想实现该功能，可以借助第三方图片上传服务器。
+
+Rails3.1之后引进了asset pipeline，静态资源能够自动产生。解决方式，在production.rb配置文件中，将config.assets.compile改为true。或者预先编译一次再提交到代码库中。
+
+``` sh
+
+$ rake assets:procompile RAILS_ENV=production
+
+```
