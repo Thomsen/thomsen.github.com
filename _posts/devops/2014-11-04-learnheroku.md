@@ -23,13 +23,31 @@ Heroku是云计算平台，提供免费的云空间，当然要想有好的性�
 
 在系统上安装Heroku Toolbelt工具或者通过gem安装heroku。已经安装过ruby的话，推荐使用gem安装，不然toolbelt还会安装ruby一次。安装成功后，可以运行heroku命令，登录heroku。
 
+通过gem install安装，会出现
+> !    The `heroku` gem has been deprecated and replaced with the Heroku Toolbelt.
+
 ```sh
 
 $ hroku login
 
 ```
 
-登录成功后，会添加ssh证书，可通过heroku keys查看，heroku keys:remove移除key。
+登录成功后，会添加ssh证书，可通过heroku keys查看，heroku keys:remove移除key。linux上要对.netrc设置权限。
+
+```sh
+
+$ sudo chmod 0600 ~/.netrc
+
+```
+
+由于linux可能有多个ssh key，所以指定一个新的，有意思的，名字为id_rsa.heroku。
+
+```sh
+
+$ ssh-keygen -t rsa
+$ heroku keys:add
+
+```
 
 #### 2. 部署 ####
 
@@ -49,7 +67,7 @@ remote add heroku需要在heroku添加mibo app才能找到对应的mibo.git。he
 
 ``` sh
 
-$ bundle install --without product
+$ bundle install --without production
 
 ``` 
 
