@@ -83,7 +83,7 @@ $ heroku open
 
 #### 3. 使用数据库 ####
 
-查看组件
+3.1 查看组件
 
 ``` sh
 
@@ -91,7 +91,7 @@ $ heroku addons
 
 ```
 
-查看配置
+3.2 查看配置
 
 ``` sh
 
@@ -101,7 +101,7 @@ $ heroku pg
 
 ```
 
-配置数据库pg，执行迁移
+3.3 配置数据库pg，执行迁移
 
 ``` sh
 
@@ -109,7 +109,7 @@ $ heroku run rake db:schema:load
 
 ```
 
-本地安装PostgresSQL，能够用psql命令
+3.4 本地安装PostgresSQL，能够用psql命令
 
 ``` sh
 
@@ -121,6 +121,28 @@ $ heroku pg:psql
  !    Run this command from an app folder or specify which app to use with --app
  APP.
 __要在工程目录下运行__
+
+
+3.5 多个项目共用一个数据库，
+
+在heroku的管理页面，可以管理[databases](https://postgres.heroku.com/databases)。通过rails的database.yml配置数据，没有成功，部署到heroku后会自动生成配置文件去连接postgresql。
+
+This behavior is only needed up to Rails 4.1. Any later version contains direct support for specifying a connection URL and configuration in the database.yml so we do not have to overwrite it.
+
+升级rails到4.2.0.rc3，database.yml中使用url连接数据库，能够共享。部署成功后，删除项目使用的数据库。
+
+3.6 addons的使用
+
+``` sh
+
+$ heroku addons | grep POSTGRES # 查看当前工程使用的数据库
+
+$ heroku addons:remove heroku-postgresql:hobby-dev # 删除数据库
+
+$ heroku addons:add heroku-postgresql:hobby-dev # 创建新数据库
+
+
+```
 
 
 #### 4. 绑定域名 ###
