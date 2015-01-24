@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: post
 title: Android Studio 1.0
-category: Mobile
-tags: []
+category: mobile
+tags: ['android studio']
 ---
 
 之前断断续续的使用了android studio开发工具，现在android studio 1.0稳定版正式发布了。android studio升级后，首先要解决的是之前的android项目像高版本迁移。android studio采用的是gradle编译android项目，而对应android studio的gradle tools也会升级。

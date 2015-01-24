@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: post
 title: RoR MVC
-category: Web
-tags: [ruby, rails, mvc]
+category: ruby
+tags: [rails]
 ---
 
 rails的指导思想：

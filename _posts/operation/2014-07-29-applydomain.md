@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: post
 title: 域名申请
-category: Web
-tags: [域名]
+category: operation
+tags: [domain]
 ---
 
 域名作为个人或组织在网络上的标识，是一种身份的象征。

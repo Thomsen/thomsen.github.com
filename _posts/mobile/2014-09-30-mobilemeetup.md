@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: post
 title: Mobile Meetup
-category: Mobile
-tags: []
+category: mobile
+tags: [android]
 ---
 
 在移动开发领域，主要有android、iphone、windows phone三大主流市场。另外还有html5，firefox os，ubuntu mobile，j2me。

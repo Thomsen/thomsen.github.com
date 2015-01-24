@@ -1,8 +1,8 @@
 ---
 layout: default
 title: RoR 入门学习
-category: Web
-tag: [ruby, rails]
+category: ruby
+tag: [rails]
 ---
 
 ### 开发版本 ###

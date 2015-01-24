@@ -1,8 +1,8 @@
 ---
+layout: post
 title: Docker 入门
-layout: default
-category: DevOps
-tags: [Docker]
+category: operation
+tags: [docker]
 ---
 
 Debian Wheezy安装Docker

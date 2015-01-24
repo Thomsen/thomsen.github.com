@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: post
 title: Ruby Symbol
-category: Web
-tags: []
+category: ruby
+tags: [ruby]
 ---
 
 ### What Symbol ###

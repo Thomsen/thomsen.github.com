@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: post
 title: 新的启航
-category: DevOps
-tags: [计划]
+category: plan
+tags: []
 ---
 
 人生总是在不断的航行中度过，其中有波浪有平静。从毕业来已经整整过去两年零二个月，其中工作上没有经历什么大的波动。在现在的公司也已经呆了两年零一个月，后面的一段时间还会继续呆下去。

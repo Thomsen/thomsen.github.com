@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: post
 title: MongoDB 入门
 category: database
-tags: []
+tags: [mongodb]
 ---
 
 MongoDB是非关系数据库NoSQL的一种，支持的特点：

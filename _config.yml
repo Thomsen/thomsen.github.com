@@ -34,9 +34,9 @@ github:
 JB:
   version :       0.3.2
 
-  archive_path:    /public/pages/archives.html
-  categories_path: /public/pages/categories.html
-  tags_path:       /public/pages/tags.html
+  archive_path:    /public/pages/archives/index.html
+  categories_path: /public/pages/categories/index.html
+  tags_path:       /public/pages/tags/index.html
   atom_path:       /public/pages/atom.xml
   rss_path:        /public/pages/rss.xml
 

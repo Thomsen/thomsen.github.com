@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: post
 title: Heroku部署Rails项目
-category: DevOps
-tag: []
+category: operation
+tag: [heroku]
 ---
 
 ### 简介 ###

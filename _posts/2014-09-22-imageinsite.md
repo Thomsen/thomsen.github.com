@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: post
 title: 图片
-category: Others
+category: test
 ---
 
 ![image test]({{ site.image.path }}/test.jpg)

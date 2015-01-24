@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: post
 title: Emacs Markdown模式
-category: Others
-tag: [emacs, markdown]
+category: tools
+tag: [markdown]
 ---
 
 markdown的初始化

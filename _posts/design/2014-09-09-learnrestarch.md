@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: post
 title: REST 架构
-category: Web
-tags: [设计，架构]
+category: design
+tags: [restful]
 ---
 
 REST，Representational State Transfer，含状态传输。REST是设计风格而不是标准，SOAP是一个协议。REST通常基于使用HTTP、URI和XML以及HTML这些现有的广泛流行的协议和标准。

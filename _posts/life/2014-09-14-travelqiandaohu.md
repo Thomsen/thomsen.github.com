@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: post
 title: 千岛湖之行
-category: Life
-tags: [旅行]
+category: life
+tags: [travel]
 ---
 
 两天的千岛湖之行结束了，这次是公司组织的team building。

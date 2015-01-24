@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: post
 title: 2014国庆之行
-category: Life
-tags: []
+category: life
+tags: [travel]
 hidden: true
 ---
 
