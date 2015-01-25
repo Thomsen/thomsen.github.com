@@ -1,3 +1,23 @@
 html {
     font-size: 16px; /* effect rem */
 }
+
+.sidebar {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.sidebar a {
+    color: #000 !important;
+}
+
+/* lanyon white theme */
+.theme-base-0w .sidebar,
+.theme-base-0w .sidebar-toggle:active,
+.theme-base-0w #sidebar-checkbox:checked ~ .sidebar-toggle {
+    background-color: #ffffff;
+}
+.theme-base-0w .container a,
+.theme-base-0w .sidebar-toggle,
+.theme-base-0w .related-posts li a:hover {
+    color: #000000;
+}
