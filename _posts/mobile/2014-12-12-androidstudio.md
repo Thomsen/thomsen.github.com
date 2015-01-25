@@ -10,7 +10,7 @@ tags: ['android studio']
 android studio 特性：
 
 >
-* 模板与样例
+* 模n板与样例
 * 智能代码编辑
 * 翻译编辑器
 * 多布局支持
@@ -24,7 +24,7 @@ android studio 1.0 本身包含了gradle组建工具，版本2.2.1。在android 
 
 * Updating Maven Repository Indices...
 
-``` gradle
+``` groovy
 buildscript {
   repositories {
     maven { url 'http://repo1.maven.org/maven2' }
@@ -38,12 +38,10 @@ Updating [http://repo1.maven.org/maven2] nexus-maven-repository-index.gz
 
 因为Android SDK Build-tools版本下载的是21.1.2
 
-``` gradle
-
+``` groovy
 android {
   buildToolsVersion "21.1.2"
 }
-
 ```
 
 *  Error:FAILURE: Build failed with an exception.

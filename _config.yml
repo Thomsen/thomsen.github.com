@@ -1,6 +1,6 @@
 # Dependencies
 markdown:         redcarpet  # redcarpet, rdiscount, kramdown, maruku
-highlighter:      true  # pygments rename to highlighter
+highlighter:      pygments  # jekyll higher support
 
 # Permalinks
 permalink:        pretty
