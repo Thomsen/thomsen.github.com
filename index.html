@@ -34,30 +34,48 @@ title: 首页
   {% endfor %}
 </div>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-  {% for page in (1..paginator.total_pages) %}
+<nav>
+  <ul class="pagination">
+    <li>
+      {% if paginator.page == 1 %}
+      {% elsif paginator.page == 2%}
+      <a href="{{ site.baseurl }}" aria-label="Previous">
+        <span aira-hidden="true">&laquo;</span>
+      </a>
+      {% else %}
+      <a href="{{ site.baseurl }}page{{paginator.previous_page}}" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+      {% endif %}
+    </li>
+    
+    {% for page in (1..paginator.total_pages) %}
     {% if page == paginator.page %}
-      <em>{{ page }}</em>
+    <li class="active">
+      <a href="#">{{ page }}</a>
+    </li>
     {% elsif page == 1 %}
+    <li>
       <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+      <li>
     {% else %}
+    <li>
       <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    </li>
     {% endif %}
-  {% endfor %}
-  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-</div>
+    {% endfor %}
+    
+    <li>
+      {% if paginator.page == paginator.total_pages %}
+      {% else %}
+      <a href="{{ site.baseurl }}page{{paginator.next_page}}" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+      {% endif %}
+    </li>
+    <li class="disabled hidden">
+      <span aria-hidden="false">{{ paginator.total_pages }}</span>
+    </li>
+  </ul>
 
+</nav>
