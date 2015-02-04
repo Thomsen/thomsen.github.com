@@ -8,11 +8,13 @@ title: 归档
 
   <div id="archives">
     <ul>
-    {% for post in site.posts %}
-        <li>
+      {% for post in site.posts %}
+      {% if post.hidden != true %}
+      <li>
         {{ post.date | date: "%b %d, %Y" }} &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-    {% endfor %}  <!-- liquid -->
+      </li>
+      {% endif %}
+      {% endfor %}  <!-- liquid -->
     </ul>
   </div>
 

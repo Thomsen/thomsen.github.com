@@ -40,11 +40,17 @@ JB:
   atom_path:       /public/pages/atom.xml
   rss_path:        /public/pages/rss.xml
 
+  categories_list:
+    provider:      custom
+
+  pages_list:
+    provider:      custom
+
   analytics:
     provider:      baidu
     baidu:
       tracking_id: "f4a58670867fe653f3ed0ce4e6c952dd"
-    
+
   
   comemnts:
     

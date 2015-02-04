@@ -1,0 +1,28 @@
+<table>
+  <thead>
+    <tr>
+      <th align="left">名称</th>
+      <th align="left">数量</th>
+      <th align="left">描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for category in categories_list %}
+    <tr>
+      <td align="left">
+        {{ category[0] | join: "/" }} 
+      </td>
+      <td align="left">
+        <a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category[0] }}-ref">
+          {{ category[1].size }}
+        </a>
+      </td>
+      <td align="left">
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  <tfoot>
+
+  </tfoot>
+</table>
