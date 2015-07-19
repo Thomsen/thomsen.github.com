@@ -60,7 +60,7 @@ $ git remote add origin https://github.com/bloguser/bloguser.github.io.git
 
 ```
 
-添加本地更改到远程代码库，在commit前需要添加user.name和user.email。
+添加本地更改到远程代码库，在commit前需要添加user.name和user.email，不然会以id_rsa.pub中的用户名为主。
 
 ``` sh
 
