@@ -144,15 +144,24 @@ $ ssh -T git@github.com
 
 ```
 
-部署到分支上
+增加ssh key到ssh-agent，如果ssh -T git@githu.com失败的话
 
 ``` sh
 
-$ hexo deploy
+$ ssh-add ~/.ssh/id_rsa*
+
+```
+
+部署到分支上，部署前都需要生成静态资源
+
+``` sh
+
+$ hexo deploy -g
 
 ```
 
 
 ### 访问路径 ###
 
-如果你注册了一个域名，可以在博客代码库中添加CNAME文件，将域名添加到CNAME。并在域名的管理服务中，
+如果你注册了一个域名，可以在博客代码库中添加CNAME文件，将域名添加到CNAME。并在域名的管理服务中，添加CNAME的域名解析，用一级域名的话主机名为'@'，指向bloguser.github.io。
+
