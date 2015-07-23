@@ -28,7 +28,7 @@ tag: [ruby markdown]
 <!-- more -->
 
 ### 创建github账号 ###
-
+p
 github创建账户很简单，只需要填写用户名，邮箱，密码即可。且密码还不需要重复输入进行确认。[注册地址][github]
 
 [github]: https://github.com "github"
@@ -70,7 +70,7 @@ $ git push -u origin master
 
 上述是在git命令下进行，windows也可在github for windows客户端下操作。
 
-使用github pages的分支方式访问页面，首先在github的代码库下通过settings自动生成project site，生成过程中可以选择相应的模板。如果已经显示you site is published at ... 需要确定是否生成后覆盖本分支。
+使用github pages的分支方式访问页面，首先在github的代码库下通过settings自动生成project site，生成过程中可以选择相应的模板。如果已经显示you site is published at ... 需要确定是否生成后覆盖本分支。在bloguser.github.io下会生成master分支，其他项目生成gh-pages分支。
 
 检出分支
 
