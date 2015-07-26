@@ -3,3 +3,4 @@
 Gemfile.lock
 _site
 .orig
+.sass-cache

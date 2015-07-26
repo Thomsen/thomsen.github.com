@@ -11,8 +11,13 @@ tagline:          'Image In the Mind'
 description:      ''
 url:              http://thomsen.github.com
 baseurl:          '/'
-safe:             true
+safe:             false
 paginate:         5
+
+# sass
+sass:
+  sass_dir:       _scss
+  #style:          :compressed
 
 author:
   name:           'Thomsen'
@@ -37,8 +42,8 @@ JB:
   archive_path:    /public/pages/archives/index.html
   categories_path: /public/pages/categories/index.html
   tags_path:       /public/pages/tags/index.html
-  atom_path:       /public/pages/atom.xml
-  rss_path:        /public/pages/rss.xml
+  #atom_path:       /public/pages/atom.xml
+  #rss_path:        /public/pages/rss.xml
 
   categories_list:
     provider:      custom
@@ -51,6 +56,6 @@ JB:
     baidu:
       tracking_id: "f4a58670867fe653f3ed0ce4e6c952dd"
 
-  
+
   comemnts:
-    
+
