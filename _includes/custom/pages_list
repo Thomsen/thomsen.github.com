@@ -5,9 +5,10 @@
         名称
       </th>
       <th>
-        时间
+        创建时间
       </th>
       <th>
+        修改时间
       </th>
     </tr>
   </thead>
@@ -25,9 +26,10 @@
         {% endif %}
       </td>
       <td>
-        {{ node.date }}
+        {{ node.date | date: '%Y-%m-%d %H:%M' }}
       </td>
       <td>
+        {{ node.mtime }}
       </td>
     </tr>
 
