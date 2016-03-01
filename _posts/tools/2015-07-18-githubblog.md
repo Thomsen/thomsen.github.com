@@ -28,7 +28,7 @@ tag: [ruby markdown]
 <!-- more -->
 
 ### 创建github账号 ###
-p
+
 github创建账户很简单，只需要填写用户名，邮箱，密码即可。且密码还不需要重复输入进行确认。[注册地址][github]
 
 [github]: https://github.com "github"
@@ -81,9 +81,9 @@ $ git checkout gh-pages
 
 ```
 
-如果同时建立bloguser.github.io和bloguser.github.com两个代码库，将会以bloguser.github.io为标准。并且在该库中建立gh-pages后，是无法访问的，访问的还是master。gh-pages现用与其他项目的访问目录，可通过'bloguser.github.io/projectName'访问。
+如果同时建立bloguser.github.io和bloguser.github.com两个代码库，将会以bloguser.github.io为标准。并且在该库中建立gh-pages后，是无法访问的，访问的还是master。gh-pages用与其他项目的访问目录，可通过'bloguser.github.io/projectName'访问。
 
-即使建立bloguser.github.com也不能够通过bloguser.github.com访问，同样bloguser.github.io访问，同时还在代码库中添加CNAME。而且也不是通过建立分支访问。
+即使建立bloguser.github.com也不能够通过bloguser.github.com访问，同样bloguser.github.io访问，同时还在代码库中添加CNAME。而且也不能通过建立分支访问。
 
 
 ### 配置heko ###
