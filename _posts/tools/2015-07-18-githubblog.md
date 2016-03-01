@@ -5,7 +5,7 @@ category: tools
 tag: [ruby markdown]
 ---
 
-很长时间没有更新博客了，能够再次更新博客。特别记录在[github](https://github.com)上如何记录博客开始。Github为我们提供了一个很好的平台，可以表达自己的思想，记录学习的点滴，并将其分享出来。
+[github](https://github.com)上如何记录博客？Github为我们提供了一个很好的平台，可以表达自己的思想，记录学习的点滴，并将其分享出来。
 
 在Github上创建属于自己的博客分为几步：
 
