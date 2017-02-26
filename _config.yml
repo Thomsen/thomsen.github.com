@@ -1,6 +1,9 @@
 # Dependencies
-markdown:         redcarpet  # redcarpet, rdiscount, kramdown, maruku
-highlighter:      pygments  # jekyll higher support
+#markdown:         redcarpet # redcarpet, rdiscount, kramdown, maruku
+#highlighter:      pygments  # jekyll higher support
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 # Permalinks
 permalink:        pretty
@@ -59,3 +62,5 @@ JB:
 
   comemnts:
 
+# Gems
+gems: [jekyll-paginate]
